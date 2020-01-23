@@ -33,11 +33,14 @@ early_meals = list(meals$breakfast,meals$lunch)
 
 # Create a list that has the number of items you ate for each meal
 # Hint: use the `lappy()` function to apply the `length()` function to each item
-
+num_meals = lapply(meals, length)
 
 # Write a function `add_pizza` that adds pizza to a given meal vector, and
 # returns the pizza-fied vector
-
+add_pizza <- function(meal) {
+  new_meal = c(meal, "Pizza")
+  return(new_meal)
+}
 
 # Create a vector `better_meals` that is all your meals, but with pizza!
-
+better_meals = lapply(meals, add_pizza)
