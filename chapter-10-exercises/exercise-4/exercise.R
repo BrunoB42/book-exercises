@@ -36,4 +36,4 @@ print( grants$organization[grants$total_amount==max(grants$total_amount)] )
 print( grants$organization[grants$total_amount==min(grants$total_amount)] )
 
 # How many grants were awarded in 2010?
-print( length(grants$organization) )
+print( length(grants$organization[grants$start_year=="2010"]) )
